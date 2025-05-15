@@ -152,7 +152,7 @@ int main(){
 }      
     else{
         printf("A carta 2 venceu o jogo com o total de %d",soma_2);
-        printf("atributos vencedores");
+        printf("atributos vencedores!!");
         printf("A cidade de %s",nome_cidade2);
         printf (" foi a grande vencedora do desafio super trunfo!!!\n");
 
