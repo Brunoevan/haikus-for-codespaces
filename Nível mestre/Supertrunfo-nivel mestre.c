@@ -92,7 +92,6 @@ int main(){
      o maior número de atributos ganha o jogo () */
      printf("*******Comparação de cartas***********\n\n");
 
-
     if(populacao1>populacao2) {
         printf("A carta 1 venceu no atributo população!!\n");
         soma_1=soma_1+1;
