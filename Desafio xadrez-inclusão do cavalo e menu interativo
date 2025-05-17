@@ -1,0 +1,80 @@
+#include<stdio.h>
+int main () 
+{
+int mov,mov2=1,mov3=1,mov4,mov5;//variaveis utilizada em casa estrtura{mov: movimentos torre;mov2:movimentos bispo e mov3: movimentos rainha}    
+
+// Implementando menu interativo.
+printf("Escolha uma opção:\n");    
+printf("1. Movimente a  Torre\n");
+printf("2. Movimente o Bispo\n");
+printf("3. Movimente a  Rainha\n");
+printf("4. Movimente o Cavalo\n");
+int escolhaUsuario;
+printf("Escolha uma opção:\n");
+scanf("%d",&escolhaUsuario);
+
+if(escolhaUsuario<1 || escolhaUsuario>5)
+{
+    printf("Você selecionou uma opção inválida!\n");
+
+}else{
+
+     switch (escolhaUsuario)
+    {
+    case 1:
+       // Mover a torre cinco casas para a direita.
+       printf("Movimentos da Torre.\n");
+
+       for(mov=1;mov<=5;mov++){
+
+       printf("Direita\n"); // imprimi a direção do movimento na tela (ex:direita, esquerda...).
+       
+        }
+        break;
+
+     case 2:
+        // Mover o bispo cinco casas na diagonal.
+
+        printf("Movimentos do Bispo.\n");
+
+        while(mov2<=5)
+        {
+            printf("Cima--");//imprimi a direção do movimento na tela (ex:direita, cima).
+
+            printf("Direita\n");//imprimi a direção do movimento na tela (ex:direita, cima).
+        mov2++;       
+        }
+         break;
+      
+      case 3:
+       //Mover a rainha oito casa para a esquerda.
+
+       printf("Movimentos da Rainha\n");
+            do{
+                printf("Esquerda\n");  
+        mov3++;
+        }while(mov3<=8); 
+        break;
+
+      case 4:
+        //Mover o cavalo dois movimentos para a cima e um para a direita.
+        for(mov4=0;mov4<1;mov4++)
+        {
+            for(mov5=0;mov5<2;mov5++)
+          {
+            printf("Cima\n");
+          }
+        printf("Direita\n");  
+
+       default:
+       printf("Você selecionou uma opção inválida"); 
+       
+}
+      break;  
+
+   
+    
+return 0;
+}
+}
+}
