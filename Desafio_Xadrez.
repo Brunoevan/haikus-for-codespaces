@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main () 
+
+// Mover a torre cinco casas para a direita.
+{   
+int mov,mov2=1,mov3=1;//variaveis utilizada em casa estrtura{mov: movimentos torre;mov2:movimentos bispo e mov3: movimentos rainha}
+printf("Movimentos da Torre.\n");
+for(mov=1;mov<=5;mov++){
+printf("Direita\n"); // imprimi a direção do movimento na tela (ex:direita, esquerda...).
+}
+
+// Mover o bispo cinco casa na diagonal.
+printf("Movimentos do Bispo.\n");
+while(mov2<=5)
+{
+printf("Cima--");//imprimi a direção do movimento na tela (ex:direita, cima).
+printf("Direita\n");//imprimi a direção do movimento na tela (ex:direita, cima).
+mov2++;
+}
+//Mover a rainha oito casa para a esquerda.
+printf("Movimentos da Rainha\n");
+do{
+printf("Esquerda\n");  
+mov3++;
+
+}while(mov3<=8);
+
+return 0;
+
+}
