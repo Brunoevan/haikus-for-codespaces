@@ -1,1 +1,48 @@
+#include <stdio.h>
 
+int main() {
+    int   tabuleiro[10][10] = {
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+    };
+    int i=0;
+    int j=0;
+    char letras[10] = {'A', 'B', 'C', 'D','E','F','G','H','I','J'}; // LETRAS DAS COLUNAS.
+
+    // Esta parte do código imprimi as letras que compõem o cabeçalho na horizontal.
+
+    printf("  ");
+    while (j<10)
+    {
+        printf(" %c  ",letras [j]);
+        j++;
+    }
+
+    printf("\n"); // Quebrar de linha
+
+   for (int i = 0; i < 10; i++) {
+        printf("%d - ", i + 1); //Método para começar a contagem das linhas a partir do número 1
+        for (int j = 0; j <10; j++) {
+            printf(" %d - ", tabuleiro[i][j]); // Impprimi a matriz com todos os valores zerados..
+
+            tabuleiro[5][7]=3;
+            tabuleiro[5][8]=3;
+            tabuleiro[5][9]=3;   /*De acordo com a coordenada apresentada substitui os valores de zero pelo numero 3.*/
+            tabuleiro[4][3]=3;
+            tabuleiro[5][3]=3;
+            tabuleiro[6][3]=3;
+        }
+        printf("\n"); 
+              
+        
+}
+         return 0;
+   }   
