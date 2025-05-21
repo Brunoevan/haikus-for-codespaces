@@ -1,0 +1,125 @@
+#include <stdio.h>
+
+int main() {
+    int tabuleiro[10][10] = {
+        {0, 0, 0, 0,0,0,0,0,0,0},// Matriz principal. representa a estrutrua principal do jogo
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0,0, 0, 0 ,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+        {0, 0, 0, 0,0,0,0,0,0,0},
+    };
+
+    int cone[5][5]={//Matriz representativa da figura geomérica cone.
+        {0,0,0,0,0},
+        {0,0,1,0,0},
+        {0,1,1,1,0},
+        {1,1,1,1,1},
+        {0,0,0,0,0},
+                
+    };
+
+     int cruz[5][5]={//Matriz representativa da figura geomérica cruz.
+        {0,0,3,0,0},
+        {0,0,3,0,0},
+        {3,3,3,3,3},
+        {0,0,3,0,0},
+        {0,0,3,0,0},
+                
+    };
+
+    int occt[5][5]= //Matriz representativa da figura geomérica octagono.
+    
+    {
+        {0,0,0,0,0},
+        {0,0,5,0,0},
+        {0,5,5,5,0},
+        {0,0,5,0,0},
+        {0,0,0,0,0},
+    };
+
+
+    char letras[10] = {'A', 'B', 'C', 'D','E','F','G','H','I','J'}; // LETRAS DAS COLUNAS.
+
+    // Esta parte do código imprimi as letras que compõe o cabeçalho.
+
+     printf("   "); // espaço dado para a primeira coluna que começa com a string 'A'
+     for (int j = 0; j < 10; j++) {
+        printf("  %c  ", letras[j]); // Imprimir a letra da coluna
+      }
+    printf("\n"); // Quebrar a linha
+
+    // Esta parte do código vai imprimir a matriz, acrescentando o valor 3 nas posições (5,7),(5,8),(5,9),(4,3),(5,3) e (6,3).
+    for (int i = 0; i < 10; i++) {
+        printf("%d - ", i + 1); //Método para começar a contagem das linhas a partir do número 1, impirmindo na tela.
+        for (int j = 0; j <10; j++) {
+
+            if(cone[i][j]>0 )//A patir das condiçaõ estipulada, os valores da matriz tabuleiro recebem os valores da matriz cone.
+            {
+                
+                tabuleiro[1][2]=cone[1][2];
+                tabuleiro[1][3]=cone[1][3];
+                tabuleiro[2][1]=cone[2][1];
+                tabuleiro[2][2]=cone[2][2];
+                tabuleiro[2][3]=cone[2][3];
+                tabuleiro[3][0]=cone[3][0];
+                tabuleiro[3][1]=cone[3][1];
+                tabuleiro[3][2]=cone[3][2];
+                tabuleiro[3][3]=cone[3][3];
+                tabuleiro[3][4]=cone[3][4];
+
+                    }
+           
+              if(cruz[i][j]>0)//A patir das condição estipulada, os valores da matriz tabuleiro recebem os valores da matriz cruz.
+              
+              {
+                tabuleiro[6][2]=cruz[2][2];
+                tabuleiro[6][3]=cruz[2][2];
+                tabuleiro[6][4]=cruz[2][4];
+                tabuleiro[5][2]=cruz[1][2];
+                tabuleiro[4][2]=cruz[0][2];
+                tabuleiro[7][2]=cruz[3][2];
+                tabuleiro[8][2]=cruz[4][2];
+                tabuleiro[6][0]=cruz[3][2];
+                tabuleiro[6][1]=cruz[3][2];                
+
+              }      
+                
+              if(occt[i][j]>0) //A patir das condição estipulada, os valores da matriz tabuleiro recebem os valores da matriz occt(otctogono.)
+
+              {
+                tabuleiro[7][8]= occt[1][2];
+                tabuleiro[6][8]=occt [2][2];
+                tabuleiro[7][7]=occt [2][1];
+                tabuleiro[7][9]=occt [2][3];
+                tabuleiro[8][8]=occt [3][2];
+
+
+
+              }
+
+                
+            
+
+
+            printf(" %d - ", tabuleiro[i][j]); // Impprimi a matriz com todos os valores represetnativos das respectivas figuras geométricas.
+
+
+            
+
+        }
+
+
+        printf("\n"); 
+    }
+    
+    
+    return 0;
+}
+
+    
+   
